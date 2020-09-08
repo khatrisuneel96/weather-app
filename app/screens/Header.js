@@ -4,7 +4,7 @@ import { Appbar } from "react-native-paper";
 
 export default function Header() {
   return (
-    <Appbar.Header>
+    <Appbar.Header style={{ backgroundColor: "#1C9CF6" }}>
       <Appbar.Content
         titleStyle={{
           fontFamily: "Century-Gothic-Bold",
