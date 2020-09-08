@@ -1,21 +1,30 @@
-import { StatusBar } from 'expo-status-bar';
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+// import { StatusBar } from "expo-status-bar";
+import React from "react";
+import { useFonts } from "expo-font";
+import { AppLoading } from "expo";
+import { StyleSheet, Text, View } from "react-native";
+import Header from "./app/screens/Header";
 
 export default function App() {
-  return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
-  );
+  let [fontLoaded] = useFonts({
+    "Century-Gothic-Regular": require("./app/assets/fonts/Century-Gothic-Regular.ttf"),
+    "Century-Gothic-Bold": require("./app/assets/fonts/Century-Gothic-Bold.ttf"),
+  });
+
+  if (!fontLoaded) {
+    return <AppLoading />;
+  } else {
+    return (
+      <View style={styles.container}>
+        <Header />
+      </View>
+    );
+  }
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+    backgroundColor: "#fff",
   },
 });
