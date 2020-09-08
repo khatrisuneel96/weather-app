@@ -1,10 +1,11 @@
-// import { StatusBar } from "expo-status-bar";
+import { StatusBar } from "expo-status-bar";
 import React from "react";
 import { useFonts } from "expo-font";
 import { AppLoading } from "expo";
-import { StyleSheet, Text, View } from "react-native";
+import { StyleSheet, Text, View, SafeAreaView } from "react-native";
 import Header from "./app/screens/Header";
-import SearchCity from "./app/screens/SearchCity";
+import Content from "./app/screens/Content";
+import Footer from "./app/screens/Footer";
 
 export default function App() {
   let [fontLoaded] = useFonts({
@@ -16,10 +17,13 @@ export default function App() {
     return <AppLoading />;
   } else {
     return (
-      <View style={styles.container}>
+      <SafeAreaView style={styles.container}>
         <Header />
-        <SearchCity />
-      </View>
+        <Content />
+        <Footer />
+
+        <StatusBar style="auto" />
+      </SafeAreaView>
     );
   }
 }
@@ -27,6 +31,6 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#fff",
+    margin: 20,
   },
 });
