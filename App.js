@@ -4,6 +4,7 @@ import { useFonts } from "expo-font";
 import { AppLoading } from "expo";
 import { StyleSheet, Text, View } from "react-native";
 import Header from "./app/screens/Header";
+import SearchCity from "./app/screens/SearchCity";
 
 export default function App() {
   let [fontLoaded] = useFonts({
@@ -17,6 +18,7 @@ export default function App() {
     return (
       <View style={styles.container}>
         <Header />
+        <SearchCity />
       </View>
     );
   }
