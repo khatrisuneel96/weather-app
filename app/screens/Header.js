@@ -1,15 +1,17 @@
-import React from "react";
+import React, { Component } from "react";
 import { StyleSheet, Text, View, Image } from "react-native";
 
-export default function Header() {
-  return (
-    <View>
-      <Text style={styles.text}>Weather Forecast</Text>
-      <Image source={require("../assets/sunny.jpg")} style={styles.image} />
-      <Text style={styles.temp}>39.9</Text>
-      <Text style={styles.city}>Karachi, Pakistan</Text>
-    </View>
-  );
+export default class Header extends Component {
+  render() {
+    return (
+      <View>
+        <Text style={styles.text}>Weather Forecast</Text>
+        <Image source={require("../assets/sunny.jpg")} style={styles.image} />
+        <Text style={styles.temp}>39.9</Text>
+        <Text style={styles.city}>Karachi, Pakistan</Text>
+      </View>
+    );
+  }
 }
 
 const styles = StyleSheet.create({
@@ -27,7 +29,6 @@ const styles = StyleSheet.create({
   temp: {
     fontFamily: "Century-Gothic-Bold",
     fontSize: 50,
-    // fontWeight: "900",
     textAlign: "center",
   },
   city: {
