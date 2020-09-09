@@ -5,10 +5,16 @@ export default class Footer extends Component {
   render() {
     return (
       <View>
-        <Text></Text>
+        <Text style={styles.title}>Additional Info</Text>
       </View>
     );
   }
 }
 
-const styles = StyleSheet.create({});
+const styles = StyleSheet.create({
+  title: {
+    fontFamily: "Century-Gothic-Bold",
+    fontSize: 20,
+    marginVertical: 15,
+  },
+});

@@ -6,9 +6,14 @@ export default class Content extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <Card color1="orange" color2="pink" />
+        <Card bgColor="orange" color1="orange" color2="pink" radiusLeft={80} />
         <Card color1="hotpink" color2="purple" />
-        <Card color1="lightblue" color2="lightgreen" />
+        <Card
+          bgColor="lightgreen"
+          color1="lightblue"
+          color2="lightgreen"
+          radiusRight={80}
+        />
       </View>
     );
   }

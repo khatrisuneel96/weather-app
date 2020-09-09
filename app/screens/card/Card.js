@@ -4,8 +4,14 @@ import { Text, View, StyleSheet, Image } from "react-native";
 export default class Card extends Component {
   render() {
     return (
-      <View style={styles.card}>
-        <View style={{ ...styles.bgCard, backgroundColor: this.props.color1 }}>
+      <View style={{ ...styles.card, backgroundColor: this.props.bgColor }}>
+        <View
+          style={{
+            ...styles.bgCard,
+            backgroundColor: this.props.color1,
+            borderBottomRightRadius: this.props.radiusRight,
+          }}
+        >
           <Text style={styles.text}>18:00</Text>
           <Image
             source={require("../../assets/raining.png")}
@@ -18,6 +24,7 @@ export default class Card extends Component {
             justifyContent: "flex-end",
             zIndex: -1,
             backgroundColor: this.props.color2,
+            borderTopLeftRadius: this.props.radiusLeft,
           }}
         >
           <Text style={styles.text}>12</Text>
@@ -30,7 +37,6 @@ export default class Card extends Component {
 const styles = StyleSheet.create({
   card: {
     alignItems: "center",
-    backgroundColor: "orange",
     marginTop: 10,
   },
   bgCard: {
