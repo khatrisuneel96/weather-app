@@ -60,7 +60,6 @@ const styles = StyleSheet.create({
     width: 75,
     height: 75,
     alignSelf: "center",
-    // marginTop: 15,
   },
   text: {
     fontFamily: "Century-Gothic-Bold",

@@ -42,13 +42,11 @@ export default class App extends Component {
         detail: data.city,
       },
     });
-    // console.log(this.state.report);
   }
 
   async componentDidMount() {
     this.loadFontAsync();
     await this.getFetchedWeather();
-    // console.log(" ....", this.state.report);
   }
 
   render() {
