@@ -15,10 +15,7 @@ export default class Card extends Component {
           }}
         >
           <Text style={styles.text}>18:00</Text>
-          <Image
-            source={require("../../assets/raining.png")}
-            style={styles.img}
-          />
+          <Image source={this.props.img} style={styles.img} />
         </View>
         <View
           style={{

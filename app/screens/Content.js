@@ -7,13 +7,19 @@ export default class Content extends Component {
     return (
       <View style={styles.container}>
         <Card
+          img={require("../assets/raining.png")}
           bgColor="orange"
           color1="orange"
           color2="pink"
           style={{ borderTopLeftRadius: 70 }}
         />
-        <Card color1="hotpink" color2="purple" />
         <Card
+          img={require("../assets/sunny.jpg")}
+          color1="hotpink"
+          color2="purple"
+        />
+        <Card
+          img={require("../assets/night.png")}
           bgColor="lightgreen"
           color1="lightblue"
           color2="lightgreen"
