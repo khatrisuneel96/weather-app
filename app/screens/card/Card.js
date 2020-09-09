@@ -5,7 +5,7 @@ export default class Card extends Component {
   render() {
     const time = this.props.data.dt_txt;
     const temp = this.props.data.main.temp;
-    const img = `https://openweathermap.org/img/wn/${this.props.data.weather[0].icon}@2x.png`;
+    const img = `https://openweathermap.org/themes/openweathermap/assets/vendor/owm/img/widgets/${this.props.data.weather[0].icon}.png`;
 
     return (
       <View style={{ ...styles.card, backgroundColor: this.props.bgColor }}>

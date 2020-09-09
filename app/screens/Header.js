@@ -8,7 +8,7 @@ export default class Header extends Component {
         <Text style={styles.text}>Weather Forecast</Text>
         <Image
           source={{
-            uri: `https://openweathermap.org/img/wn/${this.props.data[0].weather[0].icon}@2x.png`,
+            uri: `https://openweathermap.org/themes/openweathermap/assets/vendor/owm/img/widgets/${this.props.data[0].weather[0].icon}.png`,
           }}
           style={styles.image}
         />
