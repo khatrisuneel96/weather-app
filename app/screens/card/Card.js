@@ -43,7 +43,7 @@ const styles = StyleSheet.create({
     borderRadius: 20,
   },
   bgCard: {
-    width: 95,
+    width: 98,
     height: 100,
     alignItems: "center",
   },
