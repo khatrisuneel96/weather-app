@@ -1,30 +1,45 @@
 import { StatusBar } from "expo-status-bar";
-import React from "react";
-import { useFonts } from "expo-font";
+import React, { Component } from "react";
+import * as Font from "expo-font";
 import { AppLoading } from "expo";
-import { StyleSheet, Text, View, SafeAreaView } from "react-native";
+import { StyleSheet, SafeAreaView } from "react-native";
 import Header from "./app/screens/Header";
 import Content from "./app/screens/Content";
 import Footer from "./app/screens/Footer";
 
-export default function App() {
-  let [fontLoaded] = useFonts({
-    "Century-Gothic-Regular": require("./app/assets/fonts/Century-Gothic-Regular.ttf"),
-    "Century-Gothic-Bold": require("./app/assets/fonts/Century-Gothic-Bold.ttf"),
-  });
+let customFont = {
+  "Century-Gothic-Regular": require("./app/assets/fonts/Century-Gothic-Regular.ttf"),
+  "Century-Gothic-Bold": require("./app/assets/fonts/Century-Gothic-Bold.ttf"),
+};
 
-  if (!fontLoaded) {
-    return <AppLoading />;
-  } else {
-    return (
-      <SafeAreaView style={styles.container}>
-        <Header />
-        <Content />
-        <Footer />
+export default class App extends Component {
+  state = {
+    fontsLoaded: false,
+  };
 
-        <StatusBar style="auto" />
-      </SafeAreaView>
-    );
+  async loadFontAsync() {
+    await Font.loadAsync(customFont);
+    this.setState({ fontsLoaded: true });
+  }
+
+  componentDidMount() {
+    this.loadFontAsync();
+  }
+
+  render() {
+    if (this.state.fontsLoaded) {
+      return (
+        <SafeAreaView style={styles.container}>
+          <Header />
+          <Content />
+          <Footer />
+
+          <StatusBar style="auto" />
+        </SafeAreaView>
+      );
+    } else {
+      return <AppLoading />;
+    }
   }
 }
 

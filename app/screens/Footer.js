@@ -8,18 +8,28 @@ export default class Footer extends Component {
         <Text style={styles.title}>Additional Info</Text>
         <View style={styles.divider}>
           <View style={{ flexDirection: "row" }}>
-            <Text style={{ marginEnd: 45, fontFamily: "Century-Gothic-Bold" }}>
+            <Text
+              style={{
+                marginEnd: 45,
+                fontFamily: "Century-Gothic-Bold",
+                color: "#555",
+              }}
+            >
               Wind
             </Text>
             <Text
-              style={{ fontFamily: "Century-Gothic-Regular", color: "#777" }}
+              style={{ fontFamily: "Century-Gothic-Regular", color: "#bbb" }}
             >
               12 KM/h
             </Text>
           </View>
           <View style={{ flexDirection: "row" }}>
             <Text
-              style={{ marginRight: 40, fontFamily: "Century-Gothic-Bold" }}
+              style={{
+                marginRight: 40,
+                fontFamily: "Century-Gothic-Bold",
+                color: "#555",
+              }}
             >
               Humidity
             </Text>
@@ -27,7 +37,7 @@ export default class Footer extends Component {
               style={{
                 marginEnd: 20,
                 fontFamily: "Century-Gothic-Regular",
-                color: "#777",
+                color: "#bbb",
               }}
             >
               85%
@@ -36,18 +46,28 @@ export default class Footer extends Component {
         </View>
         <View style={styles.divider}>
           <View style={{ flexDirection: "row" }}>
-            <Text style={{ marginEnd: 25, fontFamily: "Century-Gothic-Bold" }}>
+            <Text
+              style={{
+                marginEnd: 25,
+                fontFamily: "Century-Gothic-Bold",
+                color: "#555",
+              }}
+            >
               Visibility
             </Text>
             <Text
-              style={{ fontFamily: "Century-Gothic-Regular", color: "#777" }}
+              style={{ fontFamily: "Century-Gothic-Regular", color: "#bbb" }}
             >
               25 KM
             </Text>
           </View>
           <View style={{ flexDirection: "row" }}>
             <Text
-              style={{ marginRight: 89, fontFamily: "Century-Gothic-Bold" }}
+              style={{
+                marginRight: 89,
+                fontFamily: "Century-Gothic-Bold",
+                color: "#555",
+              }}
             >
               UV
             </Text>
@@ -55,7 +75,7 @@ export default class Footer extends Component {
               style={{
                 marginEnd: 30,
                 fontFamily: "Century-Gothic-Regular",
-                color: "#777",
+                color: "#bbb",
               }}
             >
               1
