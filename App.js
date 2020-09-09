@@ -62,7 +62,7 @@ export default class App extends Component {
             data={[this.state.report.list[0], this.state.report.detail]}
           />
           <Content data={this.state.report.list} />
-          <Footer />
+          <Footer data={this.state.report.list[0]} />
 
           <StatusBar style="auto" />
         </SafeAreaView>

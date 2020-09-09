@@ -20,7 +20,7 @@ export default class Footer extends Component {
             <Text
               style={{ fontFamily: "Century-Gothic-Regular", color: "#bbb" }}
             >
-              12 KM/h
+              {this.props.data.wind.speed}m/s
             </Text>
           </View>
           <View style={{ flexDirection: "row" }}>
@@ -40,7 +40,7 @@ export default class Footer extends Component {
                 color: "#bbb",
               }}
             >
-              85%
+              {this.props.data.main.humidity}%
             </Text>
           </View>
         </View>
@@ -58,13 +58,13 @@ export default class Footer extends Component {
             <Text
               style={{ fontFamily: "Century-Gothic-Regular", color: "#bbb" }}
             >
-              25 KM
+              {this.props.data.visibility}
             </Text>
           </View>
           <View style={{ flexDirection: "row" }}>
             <Text
               style={{
-                marginRight: 89,
+                marginRight: 85,
                 fontFamily: "Century-Gothic-Bold",
                 color: "#555",
               }}
@@ -78,7 +78,7 @@ export default class Footer extends Component {
                 color: "#bbb",
               }}
             >
-              1
+              {this.props.data.clouds.all}
             </Text>
           </View>
         </View>
