@@ -9,7 +9,9 @@ export default class Card extends Component {
           style={{
             ...styles.bgCard,
             backgroundColor: this.props.color1,
-            borderBottomRightRadius: this.props.radiusRight,
+            borderTopLeftRadius: 20,
+            borderTopRightRadius: 20,
+            ...this.props.style,
           }}
         >
           <Text style={styles.text}>18:00</Text>
@@ -24,7 +26,9 @@ export default class Card extends Component {
             justifyContent: "flex-end",
             zIndex: -1,
             backgroundColor: this.props.color2,
-            borderTopLeftRadius: this.props.radiusLeft,
+            borderBottomLeftRadius: 20,
+            borderBottomRightRadius: 20,
+            ...this.props.style,
           }}
         >
           <Text style={styles.text}>12</Text>
@@ -38,6 +42,8 @@ const styles = StyleSheet.create({
   card: {
     alignItems: "center",
     marginTop: 10,
+    zIndex: 1,
+    borderRadius: 20,
   },
   bgCard: {
     width: 100,
@@ -57,13 +63,4 @@ const styles = StyleSheet.create({
     color: "#fff",
     marginVertical: 15,
   },
-  //   card1: {
-  //     backgroundColor: "orange",
-  //     // justifyContent: "flex-start",
-  //   },
-  //   card2: {
-  //     backgroundColor: "pink",
-  //     zIndex: -1,
-  //     justifyContent: "flex-end",
-  //   },
 });
