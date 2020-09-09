@@ -18,7 +18,7 @@ export default class Card extends Component {
             ...this.props.style,
           }}
         >
-          <Text style={styles.text}>18</Text>
+          <Text style={styles.text}>{time.split(" ")[1]}</Text>
           <Image
             source={{
               uri: img,
@@ -57,10 +57,10 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
   img: {
-    width: 80,
-    height: 80,
+    width: 75,
+    height: 75,
     alignSelf: "center",
-    marginTop: 15,
+    // marginTop: 15,
   },
   text: {
     fontFamily: "Century-Gothic-Bold",

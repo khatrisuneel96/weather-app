@@ -11,7 +11,7 @@ export default class Content extends Component {
           bgColor="#f18954"
           color1="#f18954"
           color2="#e36e7a"
-          style={{ borderTopLeftRadius: 70 }}
+          style={{ borderTopLeftRadius: 50 }}
           data={this.props.data[1]}
         />
         <Card
@@ -25,7 +25,7 @@ export default class Content extends Component {
           bgColor="#48567b"
           color1="#2e4759"
           color2="#48567b"
-          style={{ borderBottomRightRadius: 70 }}
+          style={{ borderBottomRightRadius: 50 }}
           data={this.props.data[3]}
         />
       </View>
