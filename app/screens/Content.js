@@ -5,11 +5,18 @@ import Card from "./card/Card";
 export default class Content extends Component {
   render() {
     return (
-      <View>
-        <Card />
+      <View style={styles.container}>
+        <Card color1="orange" color2="pink" />
+        <Card color1="hotpink" color2="purple" />
+        <Card color1="lightblue" color2="lightgreen" />
       </View>
     );
   }
 }
 
-const styles = StyleSheet.create({});
+const styles = StyleSheet.create({
+  container: {
+    flexDirection: "row",
+    justifyContent: "space-around",
+  },
+});

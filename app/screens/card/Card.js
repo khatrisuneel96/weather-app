@@ -5,14 +5,21 @@ export default class Card extends Component {
   render() {
     return (
       <View style={styles.card}>
-        <View style={{ ...styles.bgCard, ...styles.card1 }}>
+        <View style={{ ...styles.bgCard, backgroundColor: this.props.color1 }}>
           <Text style={styles.text}>18:00</Text>
           <Image
             source={require("../../assets/raining.png")}
             style={styles.img}
           />
         </View>
-        <View style={{ ...styles.bgCard, ...styles.card2 }}>
+        <View
+          style={{
+            ...styles.bgCard,
+            justifyContent: "flex-end",
+            zIndex: -1,
+            backgroundColor: this.props.color2,
+          }}
+        >
           <Text style={styles.text}>12</Text>
         </View>
       </View>
@@ -24,33 +31,33 @@ const styles = StyleSheet.create({
   card: {
     alignItems: "center",
     backgroundColor: "orange",
+    marginTop: 10,
   },
   bgCard: {
-    width: "100%",
-    height: 120,
+    width: 100,
+    height: 100,
     alignItems: "center",
   },
   img: {
-    width: 75,
-    height: 75,
+    width: 60,
+    height: 60,
     alignSelf: "center",
-    marginTop: 10,
+    marginTop: 15,
     zIndex: 99,
   },
   text: {
     fontFamily: "Century-Gothic-Bold",
-    fontSize: 35,
+    fontSize: 20,
     color: "#fff",
     marginVertical: 15,
   },
-  card1: {
-    backgroundColor: "orange",
-    // justifyContent: "flex-start",
-  },
-  card2: {
-    backgroundColor: "pink",
-    zIndex: -1,
-    borderTopLeftRadius: 80,
-    justifyContent: "flex-end",
-  },
+  //   card1: {
+  //     backgroundColor: "orange",
+  //     // justifyContent: "flex-start",
+  //   },
+  //   card2: {
+  //     backgroundColor: "pink",
+  //     zIndex: -1,
+  //     justifyContent: "flex-end",
+  //   },
 });
