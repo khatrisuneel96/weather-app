@@ -12,11 +12,13 @@ export default class Content extends Component {
           color1="#f18954"
           color2="#e36e7a"
           style={{ borderTopLeftRadius: 70 }}
+          data={this.props.data[1]}
         />
         <Card
           img={require("../assets/sunny.jpg")}
           color1="#b56390"
           color2="#7b5e90"
+          data={this.props.data[2]}
         />
         <Card
           img={require("../assets/night.png")}
@@ -24,6 +26,7 @@ export default class Content extends Component {
           color1="#2e4759"
           color2="#48567b"
           style={{ borderBottomRightRadius: 70 }}
+          data={this.props.data[3]}
         />
       </View>
     );

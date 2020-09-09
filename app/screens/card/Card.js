@@ -3,6 +3,10 @@ import { Text, View, StyleSheet, Image } from "react-native";
 
 export default class Card extends Component {
   render() {
+    const time = this.props.data.dt_txt;
+    const temp = this.props.data.main.temp;
+    const img = `https://openweathermap.org/img/wn/${this.props.data.weather[0].icon}@2x.png`;
+
     return (
       <View style={{ ...styles.card, backgroundColor: this.props.bgColor }}>
         <View
@@ -14,8 +18,13 @@ export default class Card extends Component {
             ...this.props.style,
           }}
         >
-          <Text style={styles.text}>18:00</Text>
-          <Image source={this.props.img} style={styles.img} />
+          <Text style={styles.text}>18</Text>
+          <Image
+            source={{
+              uri: img,
+            }}
+            style={styles.img}
+          />
         </View>
         <View
           style={{
@@ -29,7 +38,7 @@ export default class Card extends Component {
             ...this.props.style,
           }}
         >
-          <Text style={styles.text}>12</Text>
+          <Text style={styles.text}>{Math.ceil(temp)}</Text>
         </View>
       </View>
     );
@@ -48,8 +57,8 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
   img: {
-    width: 60,
-    height: 60,
+    width: 80,
+    height: 80,
     alignSelf: "center",
     marginTop: 15,
   },

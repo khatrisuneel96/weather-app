@@ -61,7 +61,7 @@ export default class App extends Component {
           <Header
             data={[this.state.report.list[0], this.state.report.detail]}
           />
-          <Content />
+          <Content data={this.state.report.list} />
           <Footer />
 
           <StatusBar style="auto" />
