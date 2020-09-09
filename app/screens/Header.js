@@ -6,8 +6,15 @@ export default class Header extends Component {
     return (
       <View>
         <Text style={styles.text}>Weather Forecast</Text>
-        <Image source={require("../assets/sunny.jpg")} style={styles.image} />
-        <Text style={styles.temp}>{this.props.data[0].main.temp}</Text>
+        <Image
+          source={{
+            uri: `https://openweathermap.org/img/wn/${this.props.data[0].weather[0].icon}@2x.png`,
+          }}
+          style={styles.image}
+        />
+        <Text style={styles.temp}>
+          {Math.ceil(this.props.data[0].main.temp)}
+        </Text>
         <Text style={styles.city}>
           {this.props.data[1].name}, {this.props.data[1].country}
         </Text>
@@ -23,10 +30,10 @@ const styles = StyleSheet.create({
     textAlign: "center",
   },
   image: {
-    width: 45,
-    height: 45,
+    width: 100,
+    height: 100,
     alignSelf: "center",
-    marginVertical: 6,
+    // marginVertical: 1,
   },
   temp: {
     fontFamily: "Century-Gothic-Bold",
