@@ -17,23 +17,23 @@ export default class Header extends Component {
 const styles = StyleSheet.create({
   text: {
     fontFamily: "Century-Gothic-Bold",
-    fontSize: 25,
+    fontSize: 22,
     textAlign: "center",
   },
   image: {
-    width: 70,
-    height: 70,
+    width: 45,
+    height: 45,
     alignSelf: "center",
     marginVertical: 10,
   },
   temp: {
     fontFamily: "Century-Gothic-Bold",
-    fontSize: 50,
+    fontSize: 32,
     textAlign: "center",
   },
   city: {
     fontFamily: "Century-Gothic-Bold",
-    fontSize: 17,
+    fontSize: 15,
     color: "#666",
     textAlign: "center",
   },

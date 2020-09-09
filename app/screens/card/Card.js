@@ -27,14 +27,14 @@ const styles = StyleSheet.create({
   },
   bgCard: {
     width: "100%",
-    height: 150,
+    height: 120,
     alignItems: "center",
   },
   img: {
-    width: 100,
-    height: 100,
+    width: 75,
+    height: 75,
     alignSelf: "center",
-    marginTop: 15,
+    // marginTop: 15,
     zIndex: 99,
   },
   text: {
