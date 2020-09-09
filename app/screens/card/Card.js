@@ -34,14 +34,14 @@ const styles = StyleSheet.create({
     width: 75,
     height: 75,
     alignSelf: "center",
-    // marginTop: 15,
+    marginTop: 10,
     zIndex: 99,
   },
   text: {
     fontFamily: "Century-Gothic-Bold",
     fontSize: 35,
     color: "#fff",
-    marginVertical: 20,
+    marginVertical: 15,
   },
   card1: {
     backgroundColor: "orange",
@@ -51,6 +51,6 @@ const styles = StyleSheet.create({
     backgroundColor: "pink",
     zIndex: -1,
     borderTopLeftRadius: 80,
-    justifyContent: "center",
+    justifyContent: "flex-end",
   },
 });

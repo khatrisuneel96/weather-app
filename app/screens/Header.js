@@ -24,7 +24,7 @@ const styles = StyleSheet.create({
     width: 45,
     height: 45,
     alignSelf: "center",
-    marginVertical: 10,
+    marginVertical: 6,
   },
   temp: {
     fontFamily: "Century-Gothic-Bold",
