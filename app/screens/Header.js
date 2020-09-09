@@ -7,8 +7,10 @@ export default class Header extends Component {
       <View>
         <Text style={styles.text}>Weather Forecast</Text>
         <Image source={require("../assets/sunny.jpg")} style={styles.image} />
-        <Text style={styles.temp}>39.9</Text>
-        <Text style={styles.city}>Karachi, Pakistan</Text>
+        <Text style={styles.temp}>{this.props.data[0].main.temp}</Text>
+        <Text style={styles.city}>
+          {this.props.data[1].name}, {this.props.data[1].country}
+        </Text>
       </View>
     );
   }
