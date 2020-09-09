@@ -22,6 +22,7 @@ export default class Card extends Component {
             ...styles.bgCard,
             justifyContent: "flex-end",
             zIndex: -1,
+            elevation: -1,
             backgroundColor: this.props.color2,
             borderBottomLeftRadius: 20,
             borderBottomRightRadius: 20,
@@ -39,11 +40,10 @@ const styles = StyleSheet.create({
   card: {
     alignItems: "center",
     marginTop: 10,
-    zIndex: 1,
     borderRadius: 20,
   },
   bgCard: {
-    width: 100,
+    width: 95,
     height: 100,
     alignItems: "center",
   },
@@ -52,7 +52,6 @@ const styles = StyleSheet.create({
     height: 60,
     alignSelf: "center",
     marginTop: 15,
-    zIndex: 99,
   },
   text: {
     fontFamily: "Century-Gothic-Bold",

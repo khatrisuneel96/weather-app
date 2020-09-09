@@ -8,21 +8,21 @@ export default class Content extends Component {
       <View style={styles.container}>
         <Card
           img={require("../assets/raining.png")}
-          bgColor="orange"
-          color1="orange"
-          color2="pink"
+          bgColor="#f18954"
+          color1="#f18954"
+          color2="#e36e7a"
           style={{ borderTopLeftRadius: 70 }}
         />
         <Card
           img={require("../assets/sunny.jpg")}
-          color1="hotpink"
-          color2="purple"
+          color1="#b56390"
+          color2="#7b5e90"
         />
         <Card
           img={require("../assets/night.png")}
-          bgColor="lightgreen"
-          color1="lightblue"
-          color2="lightgreen"
+          bgColor="#48567b"
+          color1="#2e4759"
+          color2="#48567b"
           style={{ borderBottomRightRadius: 70 }}
         />
       </View>
@@ -33,7 +33,7 @@ export default class Content extends Component {
 const styles = StyleSheet.create({
   container: {
     flexDirection: "row",
-    justifyContent: "space-around",
+    justifyContent: "space-between",
     borderRadius: 20,
   },
 });
