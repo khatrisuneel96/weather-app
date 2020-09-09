@@ -13,17 +13,42 @@ let customFont = {
 };
 
 export default class App extends Component {
-  state = {
-    fontsLoaded: false,
-  };
+  constructor(props) {
+    super(props);
+    this.state = {
+      fontsLoaded: false,
+      report: {
+        list: null,
+        detail: null,
+      },
+    };
+    this.getFetchedWeather = this.getFetchedWeather.bind(this);
+  }
 
   async loadFontAsync() {
     await Font.loadAsync(customFont);
     this.setState({ fontsLoaded: true });
   }
 
-  componentDidMount() {
+  async getFetchedWeather() {
+    const response = await fetch(
+      "https://api.openweathermap.org/data/2.5/forecast?q=Karachi,PK&appid=10263981798ee36f56026db960fcbecc&units=metric"
+    );
+    const data = await response.json();
+
+    this.setState({
+      report: {
+        list: [data.list[0], data.list[1], data.list[2], data.list[3]],
+        detail: data.city,
+      },
+    });
+    // console.log(this.state.report);
+  }
+
+  async componentDidMount() {
     this.loadFontAsync();
+    await this.getFetchedWeather();
+    // console.log(this.state.report);
   }
 
   render() {
